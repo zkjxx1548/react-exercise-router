@@ -1,0 +1,13 @@
+.navigation {
+  background-color: rgb(177, 171, 171);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation a {
+  padding: 11px;
+  color: rgb(83, 81, 81);
+  font-weight: bolder;
+}
