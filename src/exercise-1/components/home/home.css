@@ -1,0 +1,9 @@
+.home {
+  padding: 30px;
+  font-weight: 500;
+}
+
+.url {
+  position: relative;
+  left: -5px;
+}
