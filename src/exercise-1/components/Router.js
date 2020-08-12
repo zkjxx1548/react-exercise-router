@@ -1,6 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
 import { Link, BrowserRouter } from 'react-router-dom';
+import Home from './Home';
+import MyProfile from './MyProfile';
+import AboutUs from './AboutUs';
+
 
 class Router extends React.Component {
   render() {
