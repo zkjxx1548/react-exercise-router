@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
-import {BrowserRouter as Router} from 'react-router-dom';
+import Router from './Router';
+
 
 class App extends Component {
   render() {
