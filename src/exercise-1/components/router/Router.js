@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router';
+import { Switch, Route, Redirect } from 'react-router';
 import { Link, BrowserRouter } from 'react-router-dom';
 import Home from '../home/Home';
 import MyProfile from '../myProfile/MyProfile';
@@ -9,31 +9,31 @@ import './router.css'
 class Router extends React.Component {
   state = {
     textDecorationHome: '',
-    textDecorationMyProfile: '',
-    textDecorationAboutUs: ''
+    textDecorationMyProfile: 'none',
+    textDecorationAboutUs: 'none'
   }
 
   handleHome = () => {
     this.setState({
-      textDecorationHome: 'none',
-      textDecorationMyProfile: '',
-      textDecorationAboutUs: ''
+      textDecorationHome: '',
+      textDecorationMyProfile: 'none',
+      textDecorationAboutUs: 'none'
     })
   }
 
   handleMyProfile = () => {
     this.setState({
-      textDecorationHome: '',
-      textDecorationMyProfile: 'none',
-      textDecorationAboutUs: ''
+      textDecorationHome: 'none',
+      textDecorationMyProfile: '',
+      textDecorationAboutUs: 'none'
     })
   }
 
   handleAboutUs = () => {
     this.setState({
-      textDecorationHome: '',
-      textDecorationMyProfile: '',
-      textDecorationAboutUs: 'none'
+      textDecorationHome: 'none',
+      textDecorationMyProfile: 'none',
+      textDecorationAboutUs: ''
     })
   }
 
@@ -43,7 +43,7 @@ class Router extends React.Component {
         <div className="navigation">
           <Link to="/" style={{textDecoration: this.state.textDecorationHome}} onClick={this.handleHome}>Home</Link>
           <Link to="/my-profile" style={{textDecoration: this.state.textDecorationMyProfile}} onClick={this.handleMyProfile} >MyProfile</Link>
-          <Link to="/about-us" style={{textDecoration: this.state.textDecorationAboutUs}} onClick={this.handleAboutUs} >AboutUs</Link>
+          <Link to="/about-us" style={{textDecoration: this.state.textDecorationAboutUs}} onClick={this.handleAboutUs} handleHome={() => this.handleHome}>AboutUs</Link>
         </div>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -52,6 +52,10 @@ class Router extends React.Component {
         </Switch>
       </BrowserRouter>
     );
+  }
+
+  componentDidMount() {
+    // return <Redirect to="/" />
   }
 }
 export default Router;

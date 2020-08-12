@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './aboutUs.css';
 
 class AboutUs extends React.Component {
+
+
   render() {
     return <div className="content">
       <p className="about-p">
@@ -12,7 +14,7 @@ class AboutUs extends React.Component {
       <p className="about-p">
         <span>For more information, please</span>
         <span>view our&nbsp;    
-          <Link to="/" className="website">website.</Link>
+          <Link to="/" className="website" >website.</Link>
         </span>
       </p>
 
