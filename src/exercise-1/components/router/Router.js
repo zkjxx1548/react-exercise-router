@@ -1,10 +1,11 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router';
+import { Switch, Route } from 'react-router';
 import { Link, BrowserRouter } from 'react-router-dom';
 import Home from '../home/Home';
 import MyProfile from '../myProfile/MyProfile';
 import AboutUs from '../aboutUs/AboutUs';
 import Products from '../products/Products';
+import Details from '../products/Details';
 import './router.css'
 
 class Router extends React.Component {
@@ -63,7 +64,8 @@ class Router extends React.Component {
         </div>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/products" component={Products} />
+          <Route exact path="/products" component={Products} />
+          <Route path="/products/:id" component={Details} />
           <Route path="/my-profile" component={MyProfile} />
           <Route path="/about-us" component={AboutUs} />
         </Switch>

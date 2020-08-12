@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router';
 import '../router/router.css';
+import Details from './Details';
 
 class Products extends React.Component {
 
@@ -34,9 +36,10 @@ class Products extends React.Component {
 
   render() {
     return <div className="content flex-col">
-      <span>All Products</span>
-      {this.state.products.map(e => <span className="to-orange">{e.name}</span>)}
-    </div>
+        <span>All Products</span>
+        {this.state.products.map(e => <Link to={{pathname: "/products/:id", state: e}} className="to-orange">{e.name}</Link>)}
+      </div>
+      
   }
 }
 export default Products;
