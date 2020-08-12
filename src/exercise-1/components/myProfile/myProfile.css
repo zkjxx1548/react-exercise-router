@@ -1,0 +1,8 @@
+.user {
+  display: flex;
+  flex-direction: column;
+}
+
+.user span {
+  margin: 3px 0;
+}
