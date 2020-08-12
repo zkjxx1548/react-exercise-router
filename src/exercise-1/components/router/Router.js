@@ -63,11 +63,12 @@ class Router extends React.Component {
           <Link to="/about-us" style={{textDecoration: this.state.textDecorationAboutUs}} onClick={this.handleAboutUs} handleHome={() => this.handleHome}>AboutUs</Link>
         </div>
         <Switch>
-          <Route exact path="/" component={Home} />
           <Route exact path="/products" component={Products} />
           <Route path="/products/:id" component={Details} />
           <Route path="/my-profile" component={MyProfile} />
           <Route path="/about-us" component={AboutUs} />
+          <Route path="/goods" component={Products} />
+          <Route path="/" component={Home} />
         </Switch>
       </BrowserRouter>
     );
