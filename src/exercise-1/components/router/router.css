@@ -11,3 +11,8 @@
   color: rgb(83, 81, 81);
   font-weight: bolder;
 }
+
+.content {
+  padding: 30px;
+  font-weight: 500;
+}
