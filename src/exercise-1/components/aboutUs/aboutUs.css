@@ -1,0 +1,12 @@
+.about-p {
+  display: flex;
+  flex-direction: column;
+}
+
+.website {
+  color: rgb(206, 144, 30);
+}
+
+.about-p span {
+  margin: 3px 0;
+}

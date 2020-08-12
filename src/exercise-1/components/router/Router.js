@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router';
 import { Link, BrowserRouter } from 'react-router-dom';
 import Home from '../home/Home';
 import MyProfile from '../myProfile/MyProfile';
-import AboutUs from '../AboutUs';
+import AboutUs from '../aboutUs/AboutUs';
 import './router.css'
 
 

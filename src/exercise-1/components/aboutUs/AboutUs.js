@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './aboutUs.css';
 
 class AboutUs extends React.Component {
   render() {
-    return <div>
-      <p>
+    return <div className="content">
+      <p className="about-p">
         <span>Compang: ThoughtWorks Local</span>
         <span>Location: Xi'an</span>
       </p>
-      <p>
+      <p className="about-p">
         <span>For more information, please</span>
-        <span>view our </span>
-        <Link to="/">website.</Link>
+        <span>view our&nbsp;    
+          <Link to="/" className="website">website.</Link>
+        </span>
       </p>
 
     </div>
